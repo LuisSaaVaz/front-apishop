@@ -1,0 +1,39 @@
+.formBuy__container {
+  width: 100%;
+  padding: 0.3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.formBuy__title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0.3rem 0 0.6rem;
+  color: var(--hard--color--red);
+}
+.formBuy__group {
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+}
+.formBuy__group__label {
+  border: none;
+  font-size: 1.2rem;
+  flex: 1;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  color: var(--hard--color--blue);
+ 
+}
+.formBuy__group__input {
+  width:50%;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.3rem;
+  border: 1px solid var(--hard--color--gray);
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+}

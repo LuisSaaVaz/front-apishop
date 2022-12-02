@@ -1,0 +1,94 @@
+.precioSelect__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.precioSelect__title {
+  margin: 1rem 0 2rem 2rem;
+  font-weight: 400;
+}
+
+.precioSelect__container {
+  display: flex;
+  width: 25rem;
+  gap: 1rem;
+  margin: 0 1rem 1rem;
+}
+.precioSelect__element {
+  height: 4.7rem;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.precioSelect__label {
+  margin-bottom: 0.3rem;
+}
+.precioSelect__input {
+  height: 100%;
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid var(--main--color--gray);
+  font-size: 1.3rem;
+  text-indent: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+.precioSelect__button__container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.precioSelect__button--1 {
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: black;
+  
+  border: none;
+}
+
+.precioSelect__button--2 {
+  border-radius: 20px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: var(--mid--color--red);
+  border: 2px solid var(--main--color--red);
+  transition: 0.4s;
+}
+
+.precioSelect__button--1,
+.precioSelect__button--2 {
+  margin: 1rem 1rem 1rem 0;
+  width: 6rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.precioSelect__button--2:hover{
+  background-color: var(--main--color--red);
+}
+
+@media (max-width: 600px) {
+  .precioSelect__form {
+    justify-content: center;
+    align-items: center;
+  }
+  .precioSelect__container {
+    justify-content: flex-end;
+    width: 85%;
+  }
+  .precioSelect__button__container {
+    align-self: flex-end;
+  }
+}

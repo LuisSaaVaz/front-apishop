@@ -1,0 +1,94 @@
+.categoriesSelect__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.categoriesSelect__loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categoriesSelect__title {
+  margin: 1rem 2rem;
+  font-weight: 500;
+}
+
+.categoriesSelect__list {
+  margin: 2rem 2rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  cursor: pointer;
+}
+.categoriesSelect__element {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.selected {
+  color: var(--main--color--blue);
+}
+
+.categoriesSelect__button {
+  width: 7rem;
+  align-self: flex-end;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  border: none;
+  background-color: white;
+  color: var(--hard--color--red);
+}
+
+.categoriesSelect__element__image:hover {
+  color: var(--hard--color--red);
+  transition: 0.2s;
+}
+
+.categoriesSelect__element__text {
+  font-weight: 300;
+}
+
+@media (max-height: 700px) {
+  .categoriesSelect__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.4rem;
+    margin-right: 0.7rem;
+  }
+}
+@media (max-width: 400px) {
+  .categoriesSelect__list {
+    gap: 2rem;
+  }
+  .categoriesSelect__element {
+    width: 4rem;
+    height: 5rem;
+    display: flex;
+  }
+}
+
+@media (max-width: 320px) {
+  .categoriesSelect__list {
+    width: 80%;
+    height: 40vh;
+    overflow-y: auto;
+  }
+}

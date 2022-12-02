@@ -1,0 +1,22 @@
+.buttonNolike__button{
+  padding: .3rem 2rem;
+  border-radius: 80px;
+  border: none;
+  cursor: pointer;
+  color: var(--main--color--red);
+  transition: .2s;
+}
+.buttonNolike__button:hover{
+  background-color: var(--like--color--red);
+}
+.buttonlike__button{
+  padding: .3rem 2rem;
+  border-radius: 80px;
+  border: none;
+  cursor: pointer;
+  color: var(--main--color--red);
+  transition: .2s;
+}
+.buttonlike__button:hover{
+  background-color: var(--light--color--blue);
+}

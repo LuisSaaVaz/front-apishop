@@ -1,0 +1,119 @@
+.modal {
+  min-height: 150px;
+  background-color: white;
+  padding: 2rem 1rem;
+  max-width: 500px;
+  gap: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
+}
+
+.modal__filter {
+  min-height: 150px;
+  background-color: white;
+  max-width: 700px;
+  position: absolute;
+  left: 20rem;
+  top: 24rem;
+  gap: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
+}
+.modal__buy {
+  min-height: 150px;
+  background-color: white;
+  max-width: 500px;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
+}
+
+.modal__search {
+  position: absolute;
+  top: 5.5rem;
+  left: 16.5rem;
+  background-color: white;
+  padding: 1rem 1rem;
+  border: 2px solid var(--soft--color--red);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 14px 4px rgb(0 0 0 / 30%);
+}
+
+.modal__search:hover {
+  border: 2px solid var(--hard--color--red);
+  transition: 0.3s;
+}
+
+.card__title {
+  font-size: 1rem;
+  max-width: 100%;
+}
+
+.card__button {
+  background-color: var(--main--color--red);
+  font-family: "Roboto", sans-serif;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 20rem;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+}
+
+.card__button:hover {
+  background-color: var(--hard--color--red);
+  transition: 0.3s;
+}
+
+.modal__button {
+  background-color: var(--main--color--red);
+  font-family: "Roboto", sans-serif;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 9rem;
+  font-size: 1.4rem;
+  padding: 0.4rem 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  .modal__filter {
+    left: 10rem;
+    top: 26rem;
+  }
+  .modal__search {
+    position: absolute;
+    top: 4rem;
+    left: 6.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal__filter {
+    width: 100%;
+    left: 0;
+    top: 30;
+    position: inherit;
+  }
+}
+@media (max-width: 400px) {
+}

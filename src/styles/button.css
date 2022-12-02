@@ -1,0 +1,49 @@
+.button__container {
+  width: 90%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button__main {
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 0.9rem 0.7rem;
+  font-size: 1.3rem;
+  color: white;
+  background-color: var(--mid--color--red);
+  border: 2px solid var(--main--color--red);
+  transition: 0.3s;
+}
+.button__main:hover {
+  background-color: var(--main--color--red);
+  transition: 0.3s;
+}
+
+.button__cancel {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--hard--color--red);
+  background-color: white;
+  border: none;
+}
+
+
+.button__logout{
+  cursor: pointer;
+  text-align: center;
+  padding: .4rem .5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: var(--hard--color--blue);
+  background-color: var(--soft--color--gray);
+  border: none;
+  transition: 0.2s;
+}
+
+.button__logout:hover{
+  background-color: var(--hard--color--blue);
+  color: white;
+}

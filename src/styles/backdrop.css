@@ -1,0 +1,16 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  background: #000000a1;
+  display: grid;
+  place-content: center;
+  position: fixed;
+}
+
+.white {
+  background-color: rgba(255, 255, 255, 0.338);
+}
