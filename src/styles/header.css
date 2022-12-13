@@ -30,23 +30,23 @@
 .header__search__container {
   width: 100%;
   position: relative;
+}
+
+.header__search__form {
+  flex: 2;
+  position: relative;
+  height: 40px;
+  padding: 0.4em 0.7em;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "icon__search input header__form__results";
+  /* align-content: center; */
+  gap: 0.5rem;
   border-radius: 20px;
   border: 2px solid var(--soft--color--red);
 }
 
-.header__form {
-  flex: 2;
-  position: relative;
-  height: 50px;
-  padding: 0.4em 0.7em;
-  display: grid;
-  grid-template-columns: 24px 1fr auto;
-  grid-template-areas: "icon__search input header__form__results";
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.header__form__list {
+.searchlist__ul {
   width: 100%;
   position: absolute;
   background-color: white;
@@ -57,7 +57,7 @@
   border: 2px solid var(--soft--color--red);
 }
 
-.header__form__search {
+.header__search__form__button {
   border: none;
   background: none;
 }
@@ -76,17 +76,19 @@
   fill: #111;
 }
 
-.cls-1:hover {
+.header__search__form__button:hover .cls-1,
+.header__search__form__button:hover .cls-2 {
   fill: var(--hard--color--red);
 }
 
+/* .cls-1,
 .cls-2 {
-  fill: none;
-  background-color: none;
-}
+  fill: #111;
+} */
 
 .header_form__input {
   width: 100%;
+  height: 100%;
   font-size: 1.3rem;
   border: none;
   background: none;
@@ -99,19 +101,16 @@
   grid-area: input;
 }
 
-.header_form__results {
+.header__form__results {
   color: var(--main--color--gray);
   font-size: 1.3rem;
   font-family: "Roboto", sans-serif;
-  grid-area: header_form__results;
-  /* margin-top: 0; */
+  grid-area: header__form__results;
+  margin-top: 0;
 }
 
-/* .results {
-  grid-area: results;
-} */
-
-.header__form:hover {
+.header__search__form:hover,
+.searchlist__ul:hover {
   border: 2px solid var(--hard--color--red);
   transition: 0.3s;
 }
@@ -123,13 +122,13 @@
   gap: 0.5rem;
 }
 
-.header__search__item {
+.searchlist__li {
   padding: 0.5rem;
   border-radius: 1rem;
   color: var(--hard--color--gray);
 }
 
-.header__search__item:hover {
+.searchlist__li:hover {
   color: var(--hard--color--red);
   background-color: var(--main--color--gray);
   box-shadow: 3px 4px 8px -5px rgb(0 0 0/ 80%);

@@ -1,22 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import modalEffects from "../../shared/helpers/modalEffects";
-import useModal from "../../shared/hooks/useModal";
 import { useTotals } from "../../shared/hooks/useTotals";
-import { ButtonSearchFilter } from "../Buttons/ButtonSearchFilter";
-import Modal from "../Modal/Modal";
+import { ButtonSearchFilter } from "../Buttons/ButtonSearch";
 import { FormSearch } from "./FormSearch";
 import { SearchList } from "./SearchList";
 
 export const Search = () => {
   const [text, setText] = useState("");
-  const { close, modalOpen, open } = useModal();
-  const { sliceMid } = modalEffects();
   const navigate = useNavigate();
   let focus = false;
 
   const handleChange = (event) => {
-    open();
     setText(event.target.value);
   };
   const handleSubmit = (event) => {
@@ -24,16 +18,17 @@ export const Search = () => {
     text.length > 0 && navigate(`/products/filterBy/search/${text}`);
     //perder el foco del input
     event.target[0].blur();
-    close();
     // setText("");
   };
 
   const handleFocus = () => {
     focus = true;
+    console.log(focus);
   };
 
   const handleBlur = () => {
     focus = false;
+    console.log(focus);
   };
 
   /* const { totals, loading, error } = useTotals(text);
@@ -41,12 +36,15 @@ export const Search = () => {
 
   return (
     <div className="header__search__container">
-      {/* <FormSearch
+      <FormSearch
+        className="header__search__form"
         handleChange={handleChange}
         handleSubmit={handleSubmit}
+        handleFocus={handleFocus}
+        handleBlur={handleBlur}
         text={text}
-      /> */}
-      <form className="header__form" onSubmit={handleSubmit}>
+      />
+      {/* <form className="header__form" onSubmit={handleSubmit}>
         <input
           className="header__form__input input"
           type="text"
@@ -60,17 +58,11 @@ export const Search = () => {
         <ButtonSearchFilter />
         {text.length > 0 && (
           <p className="header__form__results results">
-            50{/* {totals.data.allTotal} */}
+            50{{totals.data.allTotal}}
           </p>
         )}
-      </form>
-      {/* <ul className="header__form__list results">
-        <li>hola</li>
-        <li>hola</li>
-        <li>hola</li>
-        <li>hola</li>
-      </ul> */}
-      {focus && text.length > 0 && <SearchList text={text} close={close} />}
+      </form> */}
+      {text.length > 0 && <SearchList text={text} />}
     </div>
   );
 };
